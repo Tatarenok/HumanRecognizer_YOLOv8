@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Video Feed</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Webcam Video Feed</h1>
+    </header>
+    <main>
+        <img src="{{ url_for('video_feed') }}" id="video_feed">
+        <!--<video id="video" width="640" height="480" autoplay></video>-->
+        <div id="banner">
+            <button id="startbutton" onclick="startStream()">
+                <img src="/static/icons/2699194.png" alt="Начать поток" style="width: 100px; height: 100px;">
+            </button>
+            <button id="takephotobutton" onclick="takePhoto()">
+                <img src="/static/icons/photo.png" alt="Сделать фото" style="width: 100px; height: 100px;">
+            </button>
+            <button id="stopbutton" onclick="stopStream()">
+                <img src="/static/icons/not.png" alt="Завершить поток" style="width: 100px; height: 100px;">
+            </button>
+        </div>
+        <canvas id="canvas"></canvas>
+        </br>
+        </br>
+        </br>
+        </br>   
+        </br>
+        </br>
+        </br>
+        </br>   
+    </main>
+    <footer>
+        <div class="block">
+            <h2>Описание</h2>
+            <p>Сайт разработан для осуществления специализированной трансляции видео, обеспечивающей распознавание человека на записях и возможность создания снимков.</p>
+        </div>
+        <div class="block">
+            <h2>Developers</h2>
+            <ul>
+                <li><a href="#">Tatarenok</a></li>
+                <li><a href="#">Whynot46</a></li>
+                <li><a href="#">Dasada</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+    let videoFeedUrl = "{{ url_for('video_feed') }}";
+    let videoElement = document.getElementById('video_feed');
+
+    function startStream() {
+        videoElement.src = videoFeedUrl;
+    }
+
+    function takePhoto() {
+        let img = new Image();
+        img.src = videoFeedUrl;
+        img.onload = function() {
+            let canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            canvas.getContext('2d').drawImage(img, 0, 0);
+            let data = canvas.toDataURL('image/png');
+            let link = document.createElement('a');
+            link.href = data;
+            link.download = 'photo.png';
+            link.click();
+        };
+    }
+
+    function stopStream() {
+        videoElement.src = '';
+    }
+    </script>
+</body>
+</html>
