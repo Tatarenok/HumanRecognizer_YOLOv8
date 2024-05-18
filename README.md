@@ -1,6 +1,8 @@
-# HumanRecognizer_YOLOv8
+<h1 align="center">HumanRecognizer_YOLOv8</h1>
 
-![HumanRecognizer_YOLOv8](path/to/your/screenshot.png)
+<p align="center">
+  <img src="https://github.com/Tatarenok/HumanRecognizer_YOLOv8/assets/89196271/edbfa6ff-c73e-406a-94e6-297f6943ee11" alt="Название изображения">
+</p>
 
 Приложение на базе FastAPI для распознавания людей на видеопотоках с использованием YOLOv8.
 
