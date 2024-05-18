@@ -67,7 +67,7 @@ HumanRecognizer_YOLOv8 - это мощное приложение, предна�
 ## Скриншоты
 
 ### Обнаружение в действии
-![Обнаружение](path/to/your/detection-screenshot.png)
+![view](https://github.com/Tatarenok/HumanRecognizer_YOLOv8/assets/89196271/8737310e-dd27-4bbc-a8b7-ef229f6c65ca)
 
 ## Содействие
 
