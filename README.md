@@ -37,8 +37,8 @@ HumanRecognizer_YOLOv8 - это мощное приложение, предна�
 
 1. **Клонируйте репозиторий:**
     ```bash
-    git clone https://github.com/Tatarenok/YOLOv8VideoHumanDetection.git
-    cd YOLOv8VideoHumanDetection
+    git clone https://github.com/Tatarenok/HumanRecognizer_YOLOv8.git
+    cd HumanRecognizer_YOLOv8
     ```
 
 2. **Создайте и активируйте виртуальное окружение:**
